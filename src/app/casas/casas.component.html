@@ -1,0 +1,33 @@
+<div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form-group">
+            <label>Ingrese Casa</label>
+                <input type="text" class="form-control" placeholder="Ej: gryffindor" [(ngModel)]="nombre">      
+            </div>    
+        </div>
+    </div>
+    <button (click)="getCasa(nombre)" class="btn btn-primary">Buscar</button>
+</div>
+
+<div>
+    <div class="row">
+     <div class="col-lg-6">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Género</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of casa">
+                    <td>{{item.name}}</td>     
+                    <td>{{item.gender}}</td>            
+                </tr>      
+            </tbody>
+        </table>
+    </div>
+    </div>
+    </div>
+
